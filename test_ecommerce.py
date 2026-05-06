@@ -1,3 +1,4 @@
+import os
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -6,7 +7,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-BASE_URL = "http://13.206.82.69:4000"
+BASE_URL = os.environ.get("APP_URL", "http://13.206.102.133:4000")
 TEST_EMAIL = "testuser@gmail.com"
 TEST_PASSWORD = "123456"
 ADMIN_EMAIL = "testadmin@gmail.com"
